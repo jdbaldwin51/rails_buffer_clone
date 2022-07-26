@@ -1,0 +1,10 @@
+
+<!-- use password_reset_edit_url instead of password_reset_edit_path because this link will clicked in an email not on
+  the site so the full url with domain is needed -->
+  Hi <%= params[:user].email %>
+
+Someone requested a reset of you password.
+
+If this was you, click the link to reset your password. The link will expire in 15 minutes.
+
+<%= password_reset_edit_url(token: @token) %> 
